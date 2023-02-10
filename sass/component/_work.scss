@@ -1,0 +1,67 @@
+/* ========= working part start ============*/
+#working{
+    @include pgap(120px,100px,40px,40px);
+    .working_img{
+        background: url(../images/working_img.jpg) center no-repeat;
+        background-size: cover;
+        @include pgap(70px,45px,60px,40px);
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(rgba(3, 33, 143, 0.9), rgba(16, 110, 234, 0.9)); 
+        }
+        .working_text{
+            position: relative;
+            z-index: 99;
+            h5{
+                @include fonts('Livvic',18px,700,$menucolor);
+                text-transform: uppercase;
+                padding-bottom: 15px;
+            }
+            h4{
+                @include fonts('Livvic',36px,700,$menucolor);
+                line-height: 46px;
+                padding-right: 6px;
+                text-transform: capitalize;
+            }
+
+            .working_btn{
+                padding-top: 35px;
+                a{
+                    background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+                    @include pgap(14px,14px,40px,40px);
+                    border-radius: 8px;
+                    @include fonts('Livvic',16px,600,$menucolor);
+                    text-transform:uppercase;
+                    transition: all linear .3s;
+                    &:hover{
+                        background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    .working_item{
+        margin-bottom: 50px;
+        h3{
+            @include fonts('Livvic',50px,700,$secondarycolor);
+            padding-bottom: 15px;
+        }
+        h4{
+            @include fonts('Livvic',24px,600,$primarycolor);
+            padding-bottom: 20px;
+        }
+        p{
+            @include fonts('Livvic',16px,500,$pracolor);
+            line-height: 24px;
+            padding-right: 37px;
+        }
+    }
+}

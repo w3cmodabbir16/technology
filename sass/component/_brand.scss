@@ -1,0 +1,11 @@
+/* ========= brand part start ============*/
+#brand{
+    background-image: linear-gradient(330deg, #00005b 0%, #020275 90%);
+    @include pgap(70px,70px,0px,0px);
+    .brand_item{
+        text-align: center !important;
+        .brand_logo{
+            display: block;
+        }
+    }
+}

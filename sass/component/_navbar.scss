@@ -1,0 +1,100 @@
+/* ========= navbar part start ============*/
+.navbar{
+    padding: 0;
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.navbar_main{
+    // position: absolute;
+    // top: 0px;
+    // left: 0;
+    // width: 100%;
+     background-image: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);;
+     z-index: 999;
+     .logo{
+        @include fonts('Livvic',28px,600,$menucolor);
+        text-transform: capitalize;
+        i{
+            color: #0e73e4;
+            margin-right: 9px;
+        }
+     }
+    
+     .navbar_menu{
+         li{
+            padding-right: 30px;
+            line-height: 80px;
+             a{
+                @include fonts('Livvic',15px,600,$menucolor);
+                text-transform: capitalize;
+                transition: all linear .3s;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background-color: #ddd;
+                    bottom: 25px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all linear .3s;
+                }
+                &:hover{
+                    color: #ddd;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+         }
+     }
+     .d-flex {
+         .search{
+             color: $menucolor;
+             font-size: 20px;
+             margin-right: 30px;
+             margin-top: 6px;
+             position: relative;
+             transition: all linear .3s;
+             &:hover{
+                 color: #ddd;
+             }
+             &::after{
+                position: absolute;
+                content: "";
+                right: -12px;
+                top: 0px;
+                width: 2px;
+                height: 20px;
+                background-color: #fff;
+             }
+         }
+         .nav_icon{
+             a{
+                 color: $menucolor;
+                 font-size: 20px;
+                 margin-right: 8px;
+                 transition: all linear .3s;
+                 &:hover{
+                    color: #ddd;
+                }
+             }
+         }
+     }
+}
+.background{
+  background-image: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+}

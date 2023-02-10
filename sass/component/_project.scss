@@ -1,0 +1,120 @@
+/* ========= project part start ============*/
+#project{
+    background: url(../images/project-bg.png) center no-repeat;
+    background-size: cover;
+    background-color: $callbg;
+    @include pgap(100px,80px,0px,0px);
+    position: relative;
+        i{
+            width: 30px;
+            height: 30px;
+            border: 1px solid $menucolor;
+            color: $menucolor;
+            text-align: center;
+            line-height: 30px
+            
+        }
+        .left{
+            position: absolute;
+            content: '';
+            left: 65px;
+            top:55%;
+            transition: all linear .3s;
+            // &:hover{
+            //     color: $randomcolor;
+            //     border-color: $randomcolor;
+            // }
+        }
+        .right{
+            position: absolute;
+            content: '';
+            right:65px;
+            top:55%;
+            transition: all linear .3s;
+            // &:hover{
+            //     color: $randomcolor;
+            //     border-color: $randomcolor;
+            // }
+
+        }
+    .project_head{
+        text-align: center;
+        h6{
+            @include fonts('Livvic',14px,400,$menucolor);
+            text-transform: uppercase;
+            @include pgap(0px,10px,0px,0px);
+        }
+        h3{
+            @include fonts('Livvic',35px,700,$menucolor);
+            text-transform: capitalize;
+            line-height: 46px;
+            margin-bottom: 20px; 
+        }
+        .project_bar{
+            margin: 0 auto;
+            background-color: $randombg;
+            height: 5px;
+            width: 90px;
+            border-radius: 30px;
+            position: relative;
+            margin-bottom: 50px;
+            &::before{
+                position: absolute;
+                content: '';
+                top: -2.7px;
+                left: 0;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: $randombg;
+                animation: animat 5s infinite;
+                @keyframes animat {
+                    0%{left:0;}
+                    50%{left:80px;}
+                    100%{left: 0;}
+                }
+            }
+        }
+    }
+
+    .project_item{
+        @include mgap(0px,0px,12px,12px);
+        .project_img{
+            overflow: hidden;
+            img{
+                transition: all linear .3s;
+            }
+        }
+        .project_text{
+            transition: all linear .3s;
+            background-color: $randombg;
+            @include pgap(34px,34px,35px,45px);
+            box-shadow: 0 6px 25px rgb(0 0 0 / 7%);
+            text-align: center;
+            h4{
+                @include fonts('Livvic',28px,700,$primarycolor);
+                padding-bottom: 15px;
+                text-transform: capitalize;
+                transition: all linear .3s;
+            }
+            p{
+                @include fonts('Livvic',16px,500,$secondarycolor);
+                text-transform: capitalize;
+                transition: all linear .3s;
+            }
+        }
+
+        &:hover .project_img img{
+            transform: scale(1.2);
+        }
+        &:hover .project_text{
+            background-color: $menubg;
+        }
+        &:hover .project_text h4{
+            color: $menucolor;
+        }
+        &:hover .project_text p{
+            color: $menucolor;
+        }
+    }
+}

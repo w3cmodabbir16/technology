@@ -1,0 +1,27 @@
+/* ========= counter part start ============*/
+#counter{
+    position: absolute;
+    min-width: 860px;
+    right: 100px;
+    margin-top: -90px;
+    .counter_bg{
+        background: url(../images/counter-bg.png) center no-repeat;
+        background-size: cover;
+        background-color: $randombg;
+        @include pgap(40px,40px,40px,40px);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        .counter_item{
+            text-align: center;
+            h3{
+                @include fonts('Livvic',48px,700,$secondarycolor);
+                padding-bottom: 15px;
+            }
+            h5{
+                @include fonts('Livvic',18px,600,$primarycolor);  
+                text-transform: capitalize;
+            }
+        }
+    }
+    
+}

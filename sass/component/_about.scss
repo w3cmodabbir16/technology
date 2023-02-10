@@ -1,0 +1,160 @@
+/* ========= about part start ============*/
+#about{
+    @include pgap(100px,100px,0px,0px);
+    .about_img_main{
+        position: relative;
+        z-index: 9;
+        .about_img_first{
+            position: absolute;
+            left: 50px;
+        }
+        .about_img_second{ 
+            position: relative;
+            left: -70px;
+            top: -100px;
+            z-index: -1;
+            animation: dance 2s alternate infinite;
+              @keyframes dance {
+                0% {
+                  -webkit-transform: scale(0.8);
+                }
+                100% {
+                  -webkit-transform: scale(1);
+                }
+              }
+        }
+        .about_img_third{
+            position: relative;
+            left: -80px;
+            top: 10px;
+            z-index: -1;
+            animation: dance2 4s alternate infinite;
+              @keyframes dance2 {
+                0% {
+                  -webkit-transform: translate3d(0, 0, 0);
+                }
+                50% {
+                  -webkit-transform: translate3d(15px, -15px, 0);
+                }
+                100% {
+                  -webkit-transform: translate3d(0, -15px, 15px);
+                }
+              }
+        }
+    }
+
+    .about_text_main{
+        .about_head{
+            h4{
+                @include fonts('Livvic',14px,400,$secondarycolor);
+                text-transform: uppercase;
+                letter-spacing: 1;
+                position: relative;
+                padding-left: 95px;
+                margin-bottom: 15px;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 12px;
+                    height: 4px;
+                    background-color: $secondarycolor;
+                }
+                &::before{
+                    position: absolute;
+                    content: '';
+                    left: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 50px;
+                    height: 4px;
+                    background-color: $secondarycolor;
+                }
+            }
+        }
+        .about_title{
+            h3{
+                @include fonts('Livvic',35px,800,$primarycolor);
+                text-transform: capitalize;
+                line-height: 46px;
+                padding-bottom: 20px;
+            }
+            p{
+                @include fonts('Livvic',18px,400,$pracolor); 
+                padding-right: 45px;
+                line-height: 24px;
+            }
+        }
+
+        .skill_main{
+            padding-top: 40px;
+            .skill_item{
+                margin-bottom: 30px;
+                position: relative;
+                overflow: hidden;
+                .bar{
+                    background-color: #eee;
+                    height: 9px;
+                    width: 100%;
+                    border-radius: 5px;
+                    .progress{
+                        background-image: linear-gradient(190deg, #105aad 0%, #4e95ed 100%);
+                        height: 100%;
+                        border-radius: 5px;
+                    }
+                }
+                .prpercentage{
+                    position: absolute;
+                    content: '';
+                    top: 0px;
+                    right: 0;
+                    color: $spancolor;
+                    font-size: 18px;
+                    
+                }
+                .topic{
+                    @include fonts('Livvic',18px,500,$spancolor);
+                    text-transform: uppercase;
+                    margin-bottom: 7px;
+                }
+
+                &:nth-child(1) .bar .progress{
+                        width: 92%;
+                            
+                }
+                &:nth-child(2) .bar .progress{
+                        width: 80%;
+                            
+                }
+                &:nth-child(3) .bar .progress{
+                        width: 30%;
+                            
+                }
+                &:nth-child(4) .bar .progress{
+                        width: 72%;
+                            
+                }
+                
+            }
+        
+        }
+
+        .about_btn{
+            padding-top: 35px;
+            a{
+                background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+                @include pgap(14px,14px,40px,40px);
+                border-radius: 50px;
+                @include fonts('Livvic',16px,600,$menucolor);
+                text-transform:capitalize;
+                transition: all linear .3s;
+                &:hover{
+                    background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

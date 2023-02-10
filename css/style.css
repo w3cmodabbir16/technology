@@ -1,0 +1,1550 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 0.8;
+  padding: 0;
+  margin: 0;
+}
+
+/*========== back to top start ===========*/
+.bact_to_top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  cursor: pointer;
+}
+.bact_to_top i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-image: linear-gradient(90deg, #03228f 0%, #0e73e4 100%);
+  color: #fff;
+  font-size: 18px;
+}
+
+/*========== back to top end ===========*/
+/* ========= navbar part start ============*/
+.navbar {
+  padding: 0;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar_main {
+  background-image: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+  z-index: 999;
+}
+.navbar_main .logo {
+  font-family: "Livvic";
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+.navbar_main .logo i {
+  color: #0e73e4;
+  margin-right: 9px;
+}
+.navbar_main .navbar_menu li {
+  padding-right: 30px;
+  line-height: 80px;
+}
+.navbar_main .navbar_menu li a {
+  font-family: "Livvic";
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+  position: relative;
+}
+.navbar_main .navbar_menu li a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #ddd;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all linear 0.3s;
+}
+.navbar_main .navbar_menu li a:hover {
+  color: #ddd;
+}
+.navbar_main .navbar_menu li a:hover::after {
+  width: 100%;
+}
+.navbar_main .d-flex .search {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 30px;
+  margin-top: 6px;
+  position: relative;
+  transition: all linear 0.3s;
+}
+.navbar_main .d-flex .search:hover {
+  color: #ddd;
+}
+.navbar_main .d-flex .search::after {
+  position: absolute;
+  content: "";
+  right: -12px;
+  top: 0px;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+}
+.navbar_main .d-flex .nav_icon a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 8px;
+  transition: all linear 0.3s;
+}
+.navbar_main .d-flex .nav_icon a:hover {
+  color: #ddd;
+}
+
+.background {
+  background-image: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+
+/* ========= banner part start ============*/
+#banner {
+  background: url(../images/banner.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  -webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 55%, 100% 90%, 53% 100%, 0 88%, 0 84%, 0% 85%);
+          clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 55%, 100% 90%, 53% 100%, 0 88%, 0 84%, 0% 85%);
+}
+#banner .banner_text {
+  height: 100vh;
+}
+#banner .banner_text .banner_conent h2 {
+  font-family: "Livvic";
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 1.3;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#banner .banner_text .banner_conent p {
+  font-family: "Livvic";
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 30px;
+  padding-right: 53px;
+  padding-top: 0px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#banner .banner_text .banner_conent .banner_icon {
+  position: absolute;
+}
+#banner .banner_text .banner_conent .banner_icon::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #106eea;
+  width: 170px;
+  height: 170px;
+  display: block;
+  border-radius: 50%;
+  -webkit-animation: animate 3.25s linear infinite;
+          animation: animate 3.25s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+#banner .banner_text .banner_conent .banner_icon::before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #106eea;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  -webkit-animation: animate 3.25s linear infinite;
+          animation: animate 3.25s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+#banner .banner_text .banner_conent .banner_icon i {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  background-image: linear-gradient(180deg, #03228f 0%, #0b70e1 100%);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  cursor: pointer;
+}
+
+/* ========= about part start ============*/
+#about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#about .about_img_main {
+  position: relative;
+  z-index: 9;
+}
+#about .about_img_main .about_img_first {
+  position: absolute;
+  left: 50px;
+}
+#about .about_img_main .about_img_second {
+  position: relative;
+  left: -70px;
+  top: -100px;
+  z-index: -1;
+  -webkit-animation: dance 2s alternate infinite;
+          animation: dance 2s alternate infinite;
+}
+@-webkit-keyframes dance {
+  0% {
+    -webkit-transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes dance {
+  0% {
+    -webkit-transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+#about .about_img_main .about_img_third {
+  position: relative;
+  left: -80px;
+  top: 10px;
+  z-index: -1;
+  -webkit-animation: dance2 4s alternate infinite;
+          animation: dance2 4s alternate infinite;
+}
+@-webkit-keyframes dance2 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(15px, -15px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -15px, 15px);
+  }
+}
+@keyframes dance2 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(15px, -15px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -15px, 15px);
+  }
+}
+#about .about_text_main .about_head h4 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #03228F;
+  text-transform: uppercase;
+  letter-spacing: 1;
+  position: relative;
+  padding-left: 95px;
+  margin-bottom: 15px;
+}
+#about .about_text_main .about_head h4::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 4px;
+  background-color: #03228F;
+}
+#about .about_text_main .about_head h4::before {
+  position: absolute;
+  content: "";
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  background-color: #03228F;
+}
+#about .about_text_main .about_title h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 800;
+  color: #101010;
+  text-transform: capitalize;
+  line-height: 46px;
+  padding-bottom: 20px;
+}
+#about .about_text_main .about_title p {
+  font-family: "Livvic";
+  font-size: 18px;
+  font-weight: 400;
+  color: #444;
+  padding-right: 45px;
+  line-height: 24px;
+}
+#about .about_text_main .skill_main {
+  padding-top: 40px;
+}
+#about .about_text_main .skill_main .skill_item {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+#about .about_text_main .skill_main .skill_item .bar {
+  background-color: #eee;
+  height: 9px;
+  width: 100%;
+  border-radius: 5px;
+}
+#about .about_text_main .skill_main .skill_item .bar .progress {
+  background-image: linear-gradient(190deg, #105aad 0%, #4e95ed 100%);
+  height: 100%;
+  border-radius: 5px;
+}
+#about .about_text_main .skill_main .skill_item .prpercentage {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0;
+  color: #212121;
+  font-size: 18px;
+}
+#about .about_text_main .skill_main .skill_item .topic {
+  font-family: "Livvic";
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+#about .about_text_main .skill_main .skill_item:nth-child(1) .bar .progress {
+  width: 92%;
+}
+#about .about_text_main .skill_main .skill_item:nth-child(2) .bar .progress {
+  width: 80%;
+}
+#about .about_text_main .skill_main .skill_item:nth-child(3) .bar .progress {
+  width: 30%;
+}
+#about .about_text_main .skill_main .skill_item:nth-child(4) .bar .progress {
+  width: 72%;
+}
+#about .about_text_main .about_btn {
+  padding-top: 35px;
+}
+#about .about_text_main .about_btn a {
+  background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+}
+#about .about_text_main .about_btn a:hover {
+  background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  color: #ffffff;
+}
+
+/* ========= service part start ============*/
+#service {
+  background-color: #F6F7F9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#service .service_head {
+  text-align: center;
+}
+#service .service_head h6 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #03228F;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#service .service_head h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #101010;
+  text-transform: capitalize;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+#service .service_head .service_bar {
+  margin: 0 auto;
+  background-color: #03228f;
+  height: 5px;
+  width: 90px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#service .service_head .service_bar::before {
+  position: absolute;
+  content: "";
+  top: -2.7px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #03228f;
+  -webkit-animation: animat 5s infinite;
+          animation: animat 5s infinite;
+}
+@-webkit-keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#service .service_item {
+  background-color: #fff;
+  padding-top: 60px;
+  padding-bottom: 35px;
+  padding-left: 50px;
+  padding-right: 35px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+#service .service_item .service_icon {
+  padding-bottom: 30px;
+}
+#service .service_item .service_icon i {
+  color: #03228F;
+  font-size: 50px;
+}
+#service .service_item .service_text h4 {
+  font-family: "Livvic";
+  font-size: 22px;
+  font-weight: 600;
+  color: #101010;
+  text-transform: capitalize;
+  padding-bottom: 15px;
+  transition: all linear 0.3s;
+}
+#service .service_item .service_text h4:hover {
+  color: #106eea;
+}
+#service .service_item .service_text p {
+  font-family: "Livvic";
+  font-size: 15px;
+  font-weight: 400;
+  color: #444;
+  line-height: 28px;
+  padding-right: 5px;
+}
+
+/* ========= callus part start ============*/
+#callus {
+  background: url(../images/call_bg.png) center no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #000060;
+}
+#callus .call_text_main {
+  text-align: center;
+}
+#callus .call_text_main .call_icon {
+  position: relative;
+}
+#callus .call_text_main .call_icon::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: callus 3.25s linear infinite;
+          animation: callus 3.25s linear infinite;
+  display: block;
+}
+@-webkit-keyframes callus {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+@keyframes callus {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+#callus .call_text_main .call_icon i {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #106eea;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 99;
+}
+#callus .call_text_main .call_text {
+  margin-top: 25px;
+}
+#callus .call_text_main .call_text h6 {
+  font-family: "Livvic";
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#callus .call_text_main .call_text h4 {
+  font-family: "Livvic";
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#callus .call_text_main .call_text p {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 24px;
+  padding: 0 42px;
+}
+#callus .call_text_main .call_text .call_btn {
+  padding-top: 50px;
+}
+#callus .call_text_main .call_text .call_btn a {
+  background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+}
+#callus .call_text_main .call_text .call_btn a:hover {
+  background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  color: #ffffff;
+}
+
+/* ========= counter part start ============*/
+#counter {
+  position: absolute;
+  min-width: 860px;
+  right: 100px;
+  margin-top: -90px;
+}
+#counter .counter_bg {
+  background: url(../images/counter-bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+#counter .counter_bg .counter_item {
+  text-align: center;
+}
+#counter .counter_bg .counter_item h3 {
+  font-family: "Livvic";
+  font-size: 48px;
+  font-weight: 700;
+  color: #03228F;
+  padding-bottom: 15px;
+}
+#counter .counter_bg .counter_item h5 {
+  font-family: "Livvic";
+  font-size: 18px;
+  font-weight: 600;
+  color: #101010;
+  text-transform: capitalize;
+}
+
+/* ========= working part start ============*/
+#working {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#working .working_img {
+  background: url(../images/working_img.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 45px;
+  padding-left: 60px;
+  padding-right: 40px;
+  position: relative;
+}
+#working .working_img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(3, 33, 143, 0.9), rgba(16, 110, 234, 0.9));
+}
+#working .working_img .working_text {
+  position: relative;
+  z-index: 99;
+}
+#working .working_img .working_text h5 {
+  font-family: "Livvic";
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+#working .working_img .working_text h4 {
+  font-family: "Livvic";
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 46px;
+  padding-right: 6px;
+  text-transform: capitalize;
+}
+#working .working_img .working_text .working_btn {
+  padding-top: 35px;
+}
+#working .working_img .working_text .working_btn a {
+  background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 8px;
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+}
+#working .working_img .working_text .working_btn a:hover {
+  background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  color: #ffffff;
+}
+#working .working_item {
+  margin-bottom: 50px;
+}
+#working .working_item h3 {
+  font-family: "Livvic";
+  font-size: 50px;
+  font-weight: 700;
+  color: #03228F;
+  padding-bottom: 15px;
+}
+#working .working_item h4 {
+  font-family: "Livvic";
+  font-size: 24px;
+  font-weight: 600;
+  color: #101010;
+  padding-bottom: 20px;
+}
+#working .working_item p {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  line-height: 24px;
+  padding-right: 37px;
+}
+
+/* ========= project part start ============*/
+#project {
+  background: url(../images/project-bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #000060;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+}
+#project i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+#project .left {
+  position: absolute;
+  content: "";
+  left: 65px;
+  top: 55%;
+  transition: all linear 0.3s;
+}
+#project .right {
+  position: absolute;
+  content: "";
+  right: 65px;
+  top: 55%;
+  transition: all linear 0.3s;
+}
+#project .project_head {
+  text-align: center;
+}
+#project .project_head h6 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#project .project_head h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+#project .project_head .project_bar {
+  margin: 0 auto;
+  background-color: #fff;
+  height: 5px;
+  width: 90px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#project .project_head .project_bar::before {
+  position: absolute;
+  content: "";
+  top: -2.7px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-animation: animat 5s infinite;
+          animation: animat 5s infinite;
+}
+@keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#project .project_item {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+#project .project_item .project_img {
+  overflow: hidden;
+}
+#project .project_item .project_img img {
+  transition: all linear 0.3s;
+}
+#project .project_item .project_text {
+  transition: all linear 0.3s;
+  background-color: #fff;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 35px;
+  padding-right: 45px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+#project .project_item .project_text h4 {
+  font-family: "Livvic";
+  font-size: 28px;
+  font-weight: 700;
+  color: #101010;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+}
+#project .project_item .project_text p {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 500;
+  color: #03228F;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+}
+#project .project_item:hover .project_img img {
+  transform: scale(1.2);
+}
+#project .project_item:hover .project_text {
+  background-color: #03228f;
+}
+#project .project_item:hover .project_text h4 {
+  color: #fff;
+}
+#project .project_item:hover .project_text p {
+  color: #fff;
+}
+
+/* ========= pricing part start ============*/
+#pricing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#pricing .price_head {
+  text-align: center;
+}
+#pricing .price_head h6 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #03228F;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#pricing .price_head h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #101010;
+  text-transform: capitalize;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+#pricing .price_head .price_bar {
+  margin: 0 auto;
+  background-color: #03228f;
+  height: 5px;
+  width: 90px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#pricing .price_head .price_bar::before {
+  position: absolute;
+  content: "";
+  top: -2.7px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #03228f;
+  -webkit-animation: animat 5s infinite;
+          animation: animat 5s infinite;
+}
+@keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#pricing .price_item {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 0 0 30px #eee;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+#pricing .price_item .price_title {
+  background-color: #1273EB;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 23px;
+  padding-right: 23px;
+  border-radius: 0px 30px 30px 0px;
+  font-family: "Livvic";
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 1;
+}
+#pricing .price_item .price_icon {
+  padding-bottom: 50px;
+}
+#pricing .price_item .price_text {
+  position: relative;
+  padding-bottom: 25px;
+}
+#pricing .price_item .price_text::before {
+  position: absolute;
+  content: "";
+  left: 28px;
+  bottom: 0px;
+  width: 300px;
+  height: 2px;
+  background-color: #EBEBEB;
+}
+#pricing .price_item .price_text h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #101010;
+  padding-bottom: 15px;
+}
+#pricing .price_item .price_text h3 span {
+  font-size: 25px;
+}
+#pricing .price_item .price_text p {
+  font-family: "Livvic";
+  font-size: 15px;
+  font-weight: 500;
+  color: #212121;
+}
+#pricing .price_item .price_menu {
+  padding-top: 15px;
+}
+#pricing .price_item .price_menu ul li {
+  text-align: left;
+  font-family: "Livvic";
+  font-size: 15px;
+  font-weight: 500;
+  color: #212121;
+  padding: 9px 0px 9px 0px;
+}
+#pricing .price_item .price_menu ul li i {
+  float: right;
+  margin-right: 0;
+  color: #03228F;
+}
+#pricing .price_item .price_btn {
+  position: absolute;
+  bottom: -8px;
+  left: 135px;
+}
+#pricing .price_item .price_btn a {
+  background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 100px;
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+}
+#pricing .price_item .price_btn a:hover {
+  background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  color: #ffffff;
+}
+
+/* ========= tesimonial part start ============*/
+#tesimonial {
+  background-color: #F6F7F9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#tesimonial .testi_head {
+  text-align: center;
+}
+#tesimonial .testi_head h6 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #03228F;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#tesimonial .testi_head h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #101010;
+  text-transform: capitalize;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+#tesimonial .testi_head .testi_bar {
+  margin: 0 auto;
+  background-color: #03228f;
+  height: 5px;
+  width: 90px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#tesimonial .testi_head .testi_bar::before {
+  position: absolute;
+  content: "";
+  top: -2.7px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #03228f;
+  -webkit-animation: animat 5s infinite;
+          animation: animat 5s infinite;
+}
+@keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#tesimonial .testi_item {
+  margin-right: 24px;
+}
+#tesimonial .testi_item .testi_text {
+  background-color: #fff;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+}
+#tesimonial .testi_item .testi_text .testi_icon {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#tesimonial .testi_item .testi_text .testi_icon .testi_icon_item {
+  position: absolute;
+  width: 50px;
+  top: 13px;
+  left: 41%;
+  transform: translateY(-50%);
+}
+#tesimonial .testi_item .testi_text .testi_pra p {
+  font-family: "Livvic";
+  font-size: 17px;
+  font-weight: 400;
+  color: #444;
+  line-height: 36px;
+  padding: 0 15px;
+}
+#tesimonial .testi_item .testi_info {
+  position: relative;
+  text-align: center;
+}
+#tesimonial .testi_item .testi_info .testi_info_img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  top: -45px;
+}
+#tesimonial .testi_item .testi_info .testi_info_img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+#tesimonial .testi_item .testi_info .testi_info1 {
+  padding-top: 60px;
+}
+#tesimonial .testi_item .testi_info .testi_info1 h4 {
+  font-family: "Livvic";
+  font-size: 22px;
+  font-weight: 600;
+  color: #101010;
+  padding-bottom: 10px;
+}
+#tesimonial .testi_item .testi_info .testi_info1 p {
+  font-family: "Livvic";
+  font-size: 17px;
+  font-weight: 400;
+  color: #444;
+}
+
+/* ========= blogs part start ============*/
+#blogs {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#blogs .blogs_head {
+  text-align: center;
+}
+#blogs .blogs_head h6 {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #03228F;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#blogs .blogs_head h3 {
+  font-family: "Livvic";
+  font-size: 35px;
+  font-weight: 700;
+  color: #101010;
+  text-transform: capitalize;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+#blogs .blogs_head .blogs_bar {
+  margin: 0 auto;
+  background-color: #03228f;
+  height: 5px;
+  width: 90px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#blogs .blogs_head .blogs_bar::before {
+  position: absolute;
+  content: "";
+  top: -2.7px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #03228f;
+  -webkit-animation: animat 5s infinite;
+          animation: animat 5s infinite;
+}
+@keyframes animat {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#blogs .blog_item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  box-shadow: 0 6px 25px rgba(12, 89, 219, 0.09);
+  margin-right: 24px;
+}
+#blogs .blog_item .blog_img {
+  position: relative;
+}
+#blogs .blog_item .bolog_img_title {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+}
+#blogs .blog_item .bolog_img_title a {
+  background-image: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 100px;
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+}
+#blogs .blog_item .bolog_img_title a:hover {
+  background-image: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  color: #ffffff;
+}
+#blogs .blog_item .blog_content {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#blogs .blog_item .blog_content .blog_pra {
+  display: flex;
+}
+#blogs .blog_item .blog_content .blog_pra .bolg_date {
+  margin-right: 20px;
+}
+#blogs .blog_item .blog_content .blog_pra .bolg_date p {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+}
+#blogs .blog_item .blog_content .blog_pra .bolg_date p i {
+  color: #106eea;
+  margin-right: 6px;
+}
+#blogs .blog_item .blog_content .blog_pra .bolg_admin p {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+}
+#blogs .blog_item .blog_content .blog_pra .bolg_admin p i {
+  color: #106eea;
+  margin-right: 6px;
+}
+#blogs .blog_item .blog_content .blog_text {
+  padding-top: 16px;
+}
+#blogs .blog_item .blog_content .blog_text h5 {
+  font-family: "Livvic";
+  font-size: 20px;
+  font-weight: 600;
+  color: #101010;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+#blogs .blog_item .blog_content .blog_text p {
+  font-family: "Livvic";
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+  line-height: 24px;
+  padding-right: 65px;
+  padding-bottom: 20px;
+}
+#blogs .blog_item .blog_content .blog_text .blog_btn a {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 600;
+  color: #101010;
+  transition: all linear 0.3s;
+}
+#blogs .blog_item .blog_content .blog_text .blog_btn a i {
+  color: #444;
+  margin-left: 4px;
+  transition: all linear 0.3s;
+}
+#blogs .blog_item .blog_content .blog_text .blog_btn a:hover {
+  color: #106eea;
+  margin-left: 8px;
+}
+#blogs .blog_item .blog_content .blog_text .blog_btn a:hover i {
+  color: #106eea;
+}
+
+/* ========= brand part start ============*/
+#brand {
+  background-image: linear-gradient(330deg, #00005b 0%, #020275 90%);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#brand .brand_item {
+  text-align: center !important;
+}
+#brand .brand_item .brand_logo {
+  display: block;
+}
+
+/* ========= footer part start ============*/
+#footer {
+  background: url(../images/footer-bg.png) center no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#footer .footer_first .foot_first_logo h3 {
+  font-family: "Livvic";
+  font-size: 28px;
+  font-weight: 600;
+  color: #101010;
+  text-transform: capitalize;
+}
+#footer .footer_first .foot_first_text {
+  padding-top: 35px;
+}
+#footer .footer_first .foot_first_text p {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  line-height: 24px;
+  padding-right: 23px;
+}
+#footer .footer_first .foot_first_text .foot_socile {
+  padding-top: 35px;
+}
+#footer .footer_first .foot_first_text .foot_socile i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #3b5998;
+  color: #fff;
+}
+cu #footer .footer_first .foot_first_text .foot_socile i:nth-child(2) {
+  background-color: #55acee;
+}
+#footer .footer_first .foot_first_text .foot_socile i:nth-child(3) {
+  background-color: #d71e18;
+}
+#footer .footer_first .foot_first_text .foot_socile i:nth-child(4) {
+  background-color: #1565c0;
+}
+#footer .footer_first .foot_first_text .foot_email {
+  padding-top: 40px;
+}
+#footer .footer_first .foot_first_text .foot_email form {
+  position: relative;
+}
+#footer .footer_first .foot_first_text .foot_email form input {
+  width: 250px;
+  border: none;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 25px #eeeeee;
+  padding: 16px 60px 16px 20px;
+  font-size: 14px;
+  color: #444;
+}
+#footer .footer_first .foot_first_text .foot_email form button {
+  background-image: linear-gradient(90deg, #03228f 0%, #0e73e4 100%);
+  border-radius: 50%;
+  padding: 15px 20px 15px;
+  border: none;
+  color: #fff;
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+#footer .foot_seccond .foot_second_head h3 {
+  font-family: "Livvic";
+  font-size: 28px;
+  font-weight: 600;
+  color: #101010;
+  text-transform: capitalize;
+}
+#footer .foot_seccond .foot_second_text {
+  padding-top: 35px;
+}
+#footer .foot_seccond .foot_second_text .foot_pra {
+  font-family: "Livvic";
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  padding-bottom: 10px;
+  padding-right: 41px;
+  line-height: 24px;
+}/*# sourceMappingURL=style.css.map */

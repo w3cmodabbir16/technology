@@ -1,0 +1,102 @@
+/* ========= tesimonial part start ============*/
+#tesimonial{
+    background-color: $testimunialbg;
+    @include pgap(100px,100px,0px,0px);
+    .testi_head{
+        text-align: center;
+        h6{
+            @include fonts('Livvic',14px,400,$secondarycolor);
+            text-transform: uppercase;
+            @include pgap(0px,10px,0px,0px);
+        }
+        h3{
+            @include fonts('Livvic',35px,700,$primarycolor);
+            text-transform: capitalize;
+            line-height: 46px;
+            margin-bottom: 20px;
+        }
+        .testi_bar{
+            margin: 0 auto;
+            background-color: $menubg;
+            height: 5px;
+            width: 90px;
+            border-radius: 30px;
+            position: relative;
+            margin-bottom: 50px;
+            &::before{
+                position: absolute;
+                content: '';
+                top: -2.7px;
+                left: 0;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: $menubg;
+                animation: animat 5s infinite;
+                @keyframes animat {
+                    0%{left:0;}
+                    50%{left:80px;}
+                    100%{left: 0;}
+                }
+            }
+        }
+    }
+
+    .testi_item{
+        margin-right: 24px;
+        .testi_text{
+            background-color: $randombg;
+            @include pgap(70px,80px,40px,40px);
+            border-radius: 10px;
+            box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+            text-align: center;
+            .testi_icon{
+                position: relative;
+                @include pgap(60px,10px,0px,0px);
+                .testi_icon_item{
+                    position: absolute;
+                    width: 50px;
+                    top: 13px;
+                    left: 41%;
+                    transform: translateY(-50%);
+                }
+            }
+            .testi_pra{
+                p{
+                    @include fonts('Livvic',17px,400,$pracolor);
+                    line-height: 36px;
+                    padding: 0 15px;
+                }
+            }
+        }
+
+        .testi_info{
+            position: relative;
+            text-align: center;
+            .testi_info_img{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 99;
+                top: -45px;
+                img{
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                }
+                
+            }
+
+            .testi_info1{
+                padding-top: 60px;
+                h4{
+                    @include fonts('Livvic',22px,600,$primarycolor);
+                    padding-bottom: 10px;
+                }
+                p{
+                    @include fonts('Livvic',17px,400,$pracolor); 
+                }
+            }
+        }
+    }
+}
